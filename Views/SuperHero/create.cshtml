@@ -1,0 +1,34 @@
+@model SuperHero
+
+<form method="post">
+    <div class="border p-5 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Create SuperHero</h2>
+            <hr />
+        </div>
+        <div class="row mb-3">
+            <label asp-for="SuperHeroName"></label>
+            <input asp-for="SuperHeroName" class="form-control" />
+            <span asp-validation-for="SuperHeroName" class="text-danger"></span>
+        </div>
+        <div class="row mb-3">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" class="form-control" />
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <div class="row mb-3">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+        <div class="row mb-3">
+            <label asp-for="Group"></label>
+            <input asp-for="Group" class="form-control" />
+            <span asp-validation-for="Group" class="text-danger"></span>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary">Create</button>
+            <a asp-action="Index" class="btn btn-primary">Back to List</a>
+        </div>
+    </div>
+</form>
